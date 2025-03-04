@@ -3,7 +3,7 @@
 mahayasa3@gmail.com; <a href="https://twitter.com/mhysadptr">@mhysadptr</a>; <a href="https://github.com/mahayasa/">GitHub Repository</a>
 
 # <span style="color:#3498db">Experiences</span>
-<a href="https://rebeccacasalibro.wixsite.com/rebeccalab">Rebecca Lab</a>, Feng Chia University, Taichung, Taiwan<br>**Researcher**<br><br>
+<a href="https://rebeccacasalibro.wixsite.com/rebeccalab">Rebecca Lab</a>, Feng Chia University, Taichung, Taiwan<br>**Research Internship**<br><br>
 <a href="https://computing.kku.ac.th/en/aidalab">AIDA Lab</a>, Khon Kaen University, Khon Kaen, Thailand<br>**PhD Researcher**<br><br>
 <a href="https://instagram.com/snow.sd/">@snow.sd</a> Software Developer, Bali, Indonesia<br>**Self Employed**<br>
 
