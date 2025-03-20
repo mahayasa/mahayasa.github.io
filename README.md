@@ -8,7 +8,7 @@ mahayasa.a@kkumail.com; <a href="https://twitter.com/mhysadptr">@mhysadptr</a>; 
 <a href="https://instagram.com/snow.sd/">@snow.sd</a> Software Developer, Bali, Indonesia<br>**Self Employed**<br>
 
 # <span style="color:#3498db">Publications</span>
-The Effectiveness of GAN-based Oversampling Method on Imbalanced Multi-class Credit Score Classification<br>
+The Effectiveness of GAN-based Oversampling Method for Imbalanced Multi-class Credit Score Classification<br>
 I Nyoman Mahayasa Adiputra, Pei-Chun Lin, Paweena Wanchai<br>
 <a href="https://www.mdpi.com/2079-9292/14/4/697">Electronics</a>, 2025<br><br>
 Optimized customer churn prediction using tabular GAN-based hybrid sampling method and cost-sensitive learning<br>
