@@ -1,6 +1,8 @@
-# <span style="color:#3498db">I Nyoman Mahayasa Adiputra</span>
-<h3>Computer Scientist</h3><br>
-mahayasa.a@kkumail.com; <a href="https://twitter.com/mhysadptr">@mhysadptr</a>; <a href="https://github.com/mahayasa/">GitHub Repository</a>
+
+<img src="https://drive.google.com/uc?export=view&id=19Ad1M0UtmympMC9hjZ1SGuHMkOyi7qA9" width="200" height="200">
+<h3>I Nyoman Mahayasa Adiputra</h3>
+<h3>Computer Scientist</h3>
+mahayasa.a@kkumail.com<br><a href="https://twitter.com/mhysadptr">@mhysadptr</a>; <a href="https://github.com/mahayasa/">GitHub Repository</a>
 
 # <span style="color:#3498db">Experiences</span>
 <a href="https://rebeccacasalibro.wixsite.com/rebeccalab">Rebecca Lab</a>, Feng Chia University, Taichung, Taiwan<br>**Research Internship**<br><br>
