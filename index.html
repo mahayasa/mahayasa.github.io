@@ -41,8 +41,8 @@
         <div class="mt-4 space-y-4">
             <div>
                 <span class="font-semibold">The Effectiveness of GAN-based Oversampling Method for Imbalanced Multi-class Credit Score Classification</span>
-                <button id="audioButton1" onclick="creditscore()">
-                    ▶
+                <button  class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" id="audioButton1" onclick="creditscore()">
+                    play audio
                 </button>
                 <br>
                 I Nyoman Mahayasa Adiputra, Pei-Chun Lin, Paweena Wanchai <br>
@@ -55,8 +55,8 @@
             </div>
             <div>
                 <span class="font-semibold">CTGAN-ENN: A Tabular GAN-Based Hybrid Sampling Method for Imbalanced and Overlapped Data in Customer Churn Prediction</span>
-                <button id="audioButton" onclick="toggleAudio()">
-                    ▶
+                <button class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" id="audioButton" onclick="toggleAudio()">
+                    play audio
                 </button>
                 <br>
                 I Nyoman Mahayasa Adiputra, Paweena Wanchai<br>
@@ -100,30 +100,30 @@
     function toggleAudio() {
         if (audio.paused) {
             audio.play();
-            button.textContent = '⏸'; // Pause icon
+            button.textContent = 'pause audio'; // Pause icon
         } else {
             audio.pause();
-            button.textContent = '▶'; // Play icon
+            button.textContent = 'play audio'; // Play icon
         }
 
         // Reset to play icon when audio ends
         audio.onended = () => {
-            button.textContent = '▶';
+            button.textContent = 'play audio';
         };
     }
 
     function creditscore() {
         if (audio1.paused) {
             audio1.play();
-            button1.textContent = '⏸'; // Pause icon
+            button1.textContent = 'pause audio'; // Pause icon
         } else {
             audio1.pause();
-            button1.textContent = '▶'; // Play icon
+            button1.textContent = 'play audio'; // Play icon
         }
 
         // Reset to play icon when audio ends
         audio1.onended = () => {
-            button1.textContent = '▶';
+            button1.textContent = 'play audio';
         };
     }
 </script>
