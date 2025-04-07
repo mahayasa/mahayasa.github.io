@@ -40,8 +40,12 @@
         <h2 class="text-2xl font-semibold text-blue-400">Publications</h2>
         <div class="mt-4 space-y-4">
             <div>
-                <span class="font-semibold">The Effectiveness of GAN-based Oversampling Method for Imbalanced Multi-class Credit Score Classification</span><br>
-                I Nyoman Mahayasa Adiputra, Pei-Chun Lin, Paweena Wanchai<br>
+                <span class="font-semibold">The Effectiveness of GAN-based Oversampling Method for Imbalanced Multi-class Credit Score Classification</span>
+                <button id="audioButton1" onclick="creditscore()">
+                    ▶
+                </button>
+                <br>
+                I Nyoman Mahayasa Adiputra, Pei-Chun Lin, Paweena Wanchai <br>
                 <a href="https://www.mdpi.com/2079-9292/14/4/697" class="text-blue-300 hover:underline">Electronics</a>, 2025
             </div>
             <div>
@@ -50,9 +54,24 @@
                 <span class="text-gray-400">PeerJ Computer Science, Under Revision</span>
             </div>
             <div>
-                <span class="font-semibold">CTGAN-ENN: A Tabular GAN-Based Hybrid Sampling Method for Imbalanced and Overlapped Data in Customer Churn Prediction</span><br>
+                <span class="font-semibold">CTGAN-ENN: A Tabular GAN-Based Hybrid Sampling Method for Imbalanced and Overlapped Data in Customer Churn Prediction</span>
+                <button id="audioButton" onclick="toggleAudio()">
+                    ▶
+                </button>
+                <br>
                 I Nyoman Mahayasa Adiputra, Paweena Wanchai<br>
-                <a href="https://link.springer.com/article/10.1186/s40537-024-00982-x" class="text-blue-300 hover:underline">Journal of Big Data</a>, 2024
+                <a href="https://link.springer.com/article/10.1186/s40537-024-00982-x" class="text-blue-300 hover:underline">Journal of Big Data</a>, 2024<br>
+                
+
+                <!-- Hidden Audio Element -->
+                <audio id="audioPlayer">
+                    <source src="img/ctgan-enn.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <audio id="audioPlayer1">
+                    <source src="img/credit-score.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
             </div>
         </div>
     </div>
@@ -72,4 +91,40 @@
         </div>
     </div>
 </body>
+<script>
+    const audio = document.getElementById('audioPlayer');
+    const button = document.getElementById('audioButton');
+    const audio1 = document.getElementById('audioPlayer1');
+    const button1 = document.getElementById('audioButton1');
+
+    function toggleAudio() {
+        if (audio.paused) {
+            audio.play();
+            button.textContent = '⏸'; // Pause icon
+        } else {
+            audio.pause();
+            button.textContent = '▶'; // Play icon
+        }
+
+        // Reset to play icon when audio ends
+        audio.onended = () => {
+            button.textContent = '▶';
+        };
+    }
+
+    function creditscore() {
+        if (audio1.paused) {
+            audio1.play();
+            button1.textContent = '⏸'; // Pause icon
+        } else {
+            audio1.pause();
+            button1.textContent = '▶'; // Play icon
+        }
+
+        // Reset to play icon when audio ends
+        audio1.onended = () => {
+            button1.textContent = '▶';
+        };
+    }
+</script>
 </html>
