@@ -49,6 +49,7 @@
     
     <div class="max-w-3xl mx-auto mt-10">
         <h2 class="text-2xl font-semibold text-blue-400">Publications</h2>
+        <i>Publications audio are powered by Google NotebookLM</i>
         <div class="mt-4 space-y-4">
             <div>
                 <span class="font-semibold">Optimized customer churn prediction using tabular generative adversarial network (GAN)-based hybrid sampling method and cost-sensitive learning</span><br>
@@ -61,6 +62,12 @@
                     <a href="https://pypi.org/project/classWeightLearn/" target="_blank">
                         <img src="https://img.shields.io/pypi/v/classWeightLearn" alt="GitHub Badge" class="h-5" />
                     </a>
+                    <button
+                        class="h-5 px-2 text-[10px] font-medium text-white bg-pink-700 rounded hover:bg-pink-800 focus:ring-2 focus:outline-none focus:ring-pink-300 dark:bg-pink-600 dark:hover:bg-pink-700 dark:focus:ring-pink-800"
+                        id="audioButton2"
+                        onclick="ctganenncsl()">
+                      play audio
+                    </button>
                 </div>
             </div>
             <div>
@@ -110,6 +117,10 @@
                     <source src="audio/credit-score.wav" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
+                 <audio id="audioPlayer2">
+                    <source src="audio/ctgan-enn-csl.m4a" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio> 
             </div>
         </div>
     </div>
@@ -134,6 +145,8 @@
     const button = document.getElementById('audioButton');
     const audio1 = document.getElementById('audioPlayer1');
     const button1 = document.getElementById('audioButton1');
+     const audio2 = document.getElementById('audioPlayer2');
+    const button2 = document.getElementById('audioButton2');
 
     function toggleAudio() {
         if (audio.paused) {
@@ -162,6 +175,21 @@
         // Reset to play icon when audio ends
         audio1.onended = () => {
             button1.textContent = 'play audio';
+        };
+    }
+
+        function ctganenncsl() {
+        if (audio2.paused) {
+            audio2.play();
+            button2.textContent = 'pause audio'; // Pause icon
+        } else {
+            audio2.pause();
+            button2.textContent = 'play audio'; // Play icon
+        }
+
+        // Reset to play icon when audio ends
+        audio2.onended = () => {
+            button2.textContent = 'play audio';
         };
     }
 </script>
