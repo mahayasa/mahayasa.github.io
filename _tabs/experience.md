@@ -1,7 +1,7 @@
 ---
 title: Experiences
 icon: fas fa-archive
-order: 2
+order: 1
 ---
 <div class="card mb-4">
   <div class="card-body">
@@ -11,9 +11,9 @@ order: 2
       </div>
       <div style="flex: 1;">
         <h3 style="margin-top: 0;">Chulalongkorn University</h3>
-        <p><strong>Postdoctoral Researcher, Department of Mathematics and Computer Science</strong><br>
+        <p><strong>Postdoctoral Researcher</strong><br>Department of Mathematics and Computer Science<br>
         <em>2026</em></p>
-        <p>Advisors: Kitiporn Plaimas, PhD</p>
+        <p>Advisor: Kitiporn Plaimas, PhD</p>
       </div>
     </div>
   </div>
@@ -26,9 +26,9 @@ order: 2
       </div>
       <div style="flex: 1;">
         <h3 style="margin-top: 0;">Feng Chia University</h3>
-        <p><strong>Research Internship, Department of Information Engineering and Computer Science</strong><br>
+        <p><strong>Research Internship</strong><br>Department of Information Engineering and Computer Science<br>
         <em>Sep 2024 - Nov 2024</em></p>
-        <p>Advisors: Pei-Chun Lin, PhD</p>
+        <p>Advisor: Pei-Chun Lin, PhD</p>
       </div>
     </div>
   </div>

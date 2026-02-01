@@ -1,7 +1,7 @@
 ---
 title: Education
 icon: fas fa-graduation-cap
-order: 1
+order: 2
 ---
 <div class="card mb-4">
   <div class="card-body">
@@ -12,7 +12,7 @@ order: 1
       <div style="flex: 1;">
         <h3 style="margin-top: 0;">Khon Kaen University</h3>
         <p><strong>PhD in Computer Science & Information Technology</strong><br>
-        <em>Sep 2025</em></p>
+        <em>2022 - 2025</em></p>
         <p>Advisors: Paweena Wanchai, PhD</p>
       </div>
     </div>
