@@ -1,7 +1,7 @@
 ---
 title: Project
 icon: fas fa-gear
-order: 3
+order: 2
 ---
 > Something great will coming soon!
 {: .prompt-tip }
