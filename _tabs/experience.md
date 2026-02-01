@@ -1,5 +1,5 @@
 ---
-layout: Experiences
+title: Experiences
 icon: fas fa-archive
 order: 2
 ---

@@ -1,5 +1,5 @@
 ---
-layout: project
-icon: fas fa-archive
+title: Project
+icon: fas fa-gear
 order: 4
 ---
