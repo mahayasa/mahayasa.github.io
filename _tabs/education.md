@@ -7,7 +7,7 @@ order: 1
   <div class="card-body">
     <div style="display: flex; align-items: flex-start; gap: 20px;">
       <div style="flex-shrink: 0;">
-        <img src="https://github.com/mahayasa/gan-hybrid-sampling-customer-churn/blob/fa98c9ddd4f62b90d21c2dd8917567e0b46347de/image/coc1.png" alt="Khon Kaen University logo" style="width: 100px; height: 100px; object-fit: contain;">
+        <img src="assets/image/kku.png" alt="Khon Kaen University logo" style="width: 100px; height: 100px; object-fit: contain;">
       </div>
       <div style="flex: 1;">
         <h3 style="margin-top: 0;">Khon Kaen University</h3>
