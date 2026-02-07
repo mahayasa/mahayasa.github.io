@@ -15,11 +15,8 @@ order: 3
         <p><strong>Published Research & Open Source Package</strong><br>
         Journal of Big Data, Springer<br>
         <em>2024</em></p>
-        
         <p>A novel hybrid sampling method combining Conditional Tabular GAN with Edited Nearest Neighbors for handling imbalanced and overlapped data in customer churn prediction. Tested on five real-world datasets, demonstrating superior performance in reducing class overlap while maintaining data quality.</p>
-        
         <p><strong>Technologies:</strong> Python, Deep Learning, GANs, Machine Learning</p>
-        
         <div style="margin-top: 15px;">
           <a href="https://pypi.org/project/ctganenn/" class="btn btn-sm btn-primary" target="_blank">
             <i class="fas fa-download"></i> PyPI Package
@@ -28,7 +25,6 @@ order: 3
             <i class="fas fa-file-alt"></i> Read Paper
           </a>
         </div>
-        
         <p style="margin-top: 15px; font-size: 0.9em; color: #6c757d;">
           <strong>Citation:</strong> Adiputra, I.N.M., Wanchai, P. (2024). CTGAN-ENN: a tabular GAN-based hybrid sampling method for imbalanced and overlapped data in customer churn prediction. <em>J Big Data</em> 11, 121. DOI: 10.1186/s40537-024-00982-x
         </p>
