@@ -1,5 +1,5 @@
 ---
-title: Project
+title: AI/ML Projects
 icon: fas fa-gear
 order: 3
 ---
