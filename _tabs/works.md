@@ -3,8 +3,8 @@ title: Works
 icon: fas fa-code-fork
 order: 4
 ---
-<div class="alert alert-success" role="alert">My latest and best freelance website developer works
-</div>
+> My latest website development works
+{: .prompt-tip }
 
 <div class="card mb-4">
   <div class="card-body">
