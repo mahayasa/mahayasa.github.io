@@ -77,11 +77,11 @@ order: 4
         <img src="assets/image/webdev.png" alt="TCI Udayana logo" style="width: 100px; height: 100px; object-fit: contain;">
       </div>
       <div style="flex: 1;">
-        <h3 style="margin-top: 0;">Tourism Confucius Institute - Udayana University</h3>
+        <h3 style="margin-top: 0;">The Confucius Institute - Udayana University</h3>
         <p><strong>Educational Institution Website</strong><br>
         Cultural & Language Education Platform<br>
         <em>2020</em></p>
-        <p>Developed the official website for Tourism Confucius Institute (TCI) at Udayana University's Faculty of Tourism. The platform serves as a hub for Mandarin language education, cultural exchange programs, and international collaboration between Indonesia and China in tourism education sector.</p>
+        <p>Developed the official website for The Confucius Institute (TCI) at Udayana University. The platform serves as a hub for Mandarin language education, cultural exchange programs, and international collaboration between Indonesia and China in tourism education sector.</p>
         <p><strong>Key Features:</strong></p>
         <ul>
           <li>Program information system (HSK courses, workshops, cultural activities)</li>
