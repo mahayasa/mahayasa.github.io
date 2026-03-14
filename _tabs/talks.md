@@ -6,7 +6,7 @@ order: 5
 <div class="">
   <div class="card-body">
     <div>
-        <img src="assets/image/mathcuseminar.jpg" alt="" style="width: 50%;">
+        <img src="assets/image/mathcuseminar.jpg" alt="" style="width: 400px;">
       </div>
     </div>
   </div>
