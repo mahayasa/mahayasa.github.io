@@ -5,10 +5,7 @@ order: 3
 ---
 <div class="card mb-4">
   <div class="card-body">
-    <div style="display: flex; align-items: flex-start; gap: 20px;">
-      <div style="flex-shrink: 0;">
-        <img src="assets/image/python.jpg" alt="CTGAN-ENN logo" style="width: 100px; height: 100px; object-fit: contain;">
-      </div>
+    <div style="display: flex; align-items: flex-start; gap: 0px;">
       <div style="flex: 1;">
         <h3 style="margin-top: 0;">CTGAN-ENN: Hybrid Sampling for Imbalanced Data</h3>
         <p><strong>Published Research & Open Source Package</strong><br>
