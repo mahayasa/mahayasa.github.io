@@ -1,6 +1,6 @@
 ---
-title: AI/ML Projects
-icon: fas fa-gear
+title: Selected Publications
+icon: fas fa-book
 order: 3
 ---
 <div class="card mb-4">
