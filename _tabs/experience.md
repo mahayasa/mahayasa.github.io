@@ -27,7 +27,7 @@ order: 1
       <div style="flex: 1;">
         <h3 style="margin-top: 0;">Feng Chia University</h3>
         <p><strong>Research Internship</strong><br>Department of Information Engineering and Computer Science<br>
-        <em>Sep 2024 - Nov 2024</em></p>
+        <em>September-November, 2024</em></p>
         <p>PI: Pei-Chun Lin, PhD</p>
       </div>
     </div>
