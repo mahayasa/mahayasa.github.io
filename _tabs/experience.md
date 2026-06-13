@@ -13,7 +13,7 @@ order: 1
         <h3 style="margin-top: 0;">Chulalongkorn University</h3>
         <p><strong>Postdoctoral Researcher</strong><br>Department of Mathematics and Computer Science<br>
         <em>2026</em></p>
-        <p>Advisor: Kitiporn Plaimas, PhD</p>
+        <p>PI: Kitiporn Plaimas, PhD</p>
       </div>
     </div>
   </div>
@@ -28,7 +28,7 @@ order: 1
         <h3 style="margin-top: 0;">Feng Chia University</h3>
         <p><strong>Research Internship</strong><br>Department of Information Engineering and Computer Science<br>
         <em>Sep 2024 - Nov 2024</em></p>
-        <p>Advisor: Pei-Chun Lin, PhD</p>
+        <p>PI: Pei-Chun Lin, PhD</p>
       </div>
     </div>
   </div>
