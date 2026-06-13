@@ -12,7 +12,7 @@ order: 1
       <div style="flex: 1;">
         <h3 style="margin-top: 0;">Chulalongkorn University</h3>
         <p><strong>Postdoctoral Researcher</strong><br>Department of Mathematics and Computer Science<br>
-        <em>2026</em></p>
+        <em>2026 ~</em></p>
         <p>PI: Kitiporn Plaimas, PhD</p>
       </div>
     </div>
