@@ -16,7 +16,7 @@ timezone:
 
 title: Mahayasa Adiputra # the main title
 
-tagline: Machine Learning Researcher # it will display as the subtitle
+tagline: Computer Scientist # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
