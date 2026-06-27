@@ -10,7 +10,7 @@ order: 1
         <img src="assets/image/chula.jpg" alt="Khon Kaen University logo" style="width: 100px; height: 100px; object-fit: contain;">
       </div>
       <div style="flex: 1;">
-        <h3 style="margin-top: 0;">Chulalongkorn University</h3>
+        <h3 style="margin-top: 0;">Chulalongkorn University, Bangkok, Thailand</h3>
         <p><strong>Postdoctoral Researcher</strong><br>Department of Mathematics and Computer Science<br>
         <em>2026 ~</em></p>
         <p>PI: Kitiporn Plaimas, PhD</p>
@@ -25,7 +25,7 @@ order: 1
         <img src="assets/image/fcu.png" alt="Khon Kaen University logo" style="width: 100px; height: 100px; object-fit: contain;">
       </div>
       <div style="flex: 1;">
-        <h3 style="margin-top: 0;">Feng Chia University</h3>
+        <h3 style="margin-top: 0;">Feng Chia University, Taichung, Taiwan</h3>
         <p><strong>Research Internship</strong><br>Department of Information Engineering and Computer Science<br>
         <em>September-November, 2024</em></p>
         <p>PI: Pei-Chun Lin, PhD</p>
