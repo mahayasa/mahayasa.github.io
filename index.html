@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>I Nyoman Mahayasa Adiputra — Computer Scientist</title>
+<meta name="description" content="I Nyoman Mahayasa Adiputra (Maha) — Postdoctoral Researcher, Chulalongkorn University. Synthetic data generation, tabular AI, bioinformatics.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #F4F6F5;
+    --bg-raised: #FFFFFF;
+    --ink: #14213D;
+    --ink-soft: #4B5567;
+    --ink-faint: #8993A4;
+    --teal: #0E7C7B;
+    --coral: #E2603A;
+    --line: #D8DDD9;
+    --max: 760px;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+    *{ animation: none !important; transition: none !important; }
+  }
+
+  a{ color: inherit; }
+  a:focus-visible, button:focus-visible{
+    outline: 2px solid var(--teal);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  h1,h2,h3{
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+
+  .eyebrow{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--teal);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .dotpair{
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    flex-shrink: 0;
+  }
+  .dotpair span{ display:block; width:6px; height:6px; border-radius:50%; }
+  .dotpair .d-real{ background: var(--teal); }
+  .dotpair .d-synth{ background: transparent; border: 1.4px solid var(--coral); }
+
+  /* ---------- Header ---------- */
+  header{
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(244,246,245,0.88);
+    backdrop-filter: saturate(140%) blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner{
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .brand{
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .brand em{
+    font-style: normal;
+    color: var(--coral);
+  }
+  nav ul{
+    list-style: none;
+    display: flex;
+    gap: 22px;
+    margin: 0;
+    padding: 0;
+  }
+  nav a{
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--ink-soft);
+    font-weight: 500;
+  }
+  nav a:hover{ color: var(--ink); }
+
+  .nav-toggle{
+    display: none;
+    background: none;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    width: 36px;
+    height: 32px;
+    cursor: pointer;
+    color: var(--ink);
+  }
+
+  @media (max-width: 640px){
+    nav ul{
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: var(--bg-raised);
+      border-bottom: 1px solid var(--line);
+      flex-direction: column;
+      padding: 16px 24px;
+      gap: 14px;
+    }
+    nav ul.open{ display: flex; }
+    .nav-toggle{ display: block; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position: relative;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 72px 24px 56px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: center;
+    overflow: hidden;
+  }
+  .hero-text h1{
+    font-size: clamp(30px, 4.4vw, 42px);
+    margin: 0 0 14px;
+    line-height: 1.15;
+  }
+  .hero-text p{
+    color: var(--ink-soft);
+    max-width: 56ch;
+    margin: 0;
+    font-size: 16.5px;
+  }
+  .hero-text .role{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: var(--ink-faint);
+    margin: 10px 0 18px;
+  }
+  .avatar-wrap{
+    position: relative;
+    width: 148px;
+    height: 148px;
+    flex-shrink: 0;
+    justify-self: end;
+  }
+  .avatar-wrap img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--bg-raised);
+    box-shadow: 0 0 0 1px var(--line);
+    position: relative;
+    z-index: 2;
+    background: var(--bg-raised);
+  }
+  .scatter{
+    position: absolute;
+    inset: -34px;
+    z-index: 1;
+    opacity: 0.55;
+  }
+
+  @media (max-width: 640px){
+    .hero{ grid-template-columns: 1fr; text-align: left; padding-top: 48px; }
+    .avatar-wrap{ justify-self: start; width: 96px; height: 96px; }
+    .scatter{ inset: -20px; }
+  }
+
+  /* ---------- Sections ---------- */
+  section{
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 52px 24px;
+    border-top: 1px solid var(--line);
+  }
+  section > .eyebrow{ margin-bottom: 18px; }
+  section h2{
+    font-size: 22px;
+    margin: 0 0 6px;
+  }
+  .section-lede{
+    color: var(--ink-soft);
+    font-size: 14.5px;
+    margin: 0 0 28px;
+    max-width: 60ch;
+  }
+
+  /* About */
+  .about-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 14px;
+  }
+  .about-list li{
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    font-size: 15.5px;
+    color: var(--ink);
+  }
+  .about-list .dotpair{ margin-top: 7px; }
+  .links-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    margin-top: 26px;
+  }
+  .links-row a{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    text-decoration: none;
+    color: var(--ink-soft);
+    border: 1px solid var(--line);
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: var(--bg-raised);
+    transition: border-color .15s ease, color .15s ease;
+  }
+  .links-row a:hover{ border-color: var(--teal); color: var(--teal); }
+
+  /* Research cards */
+  .work{
+    padding: 20px 0;
+    border-top: 1px solid var(--line);
+  }
+  .work:first-of-type{ border-top: none; padding-top: 0; }
+  .work-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .work h3{
+    font-size: 17px;
+    margin: 0;
+  }
+  .work .status{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--coral);
+    border: 1px solid var(--coral);
+    padding: 2px 8px;
+    border-radius: 20px;
+  }
+  .work p{
+    margin: 8px 0 4px;
+    color: var(--ink-soft);
+    font-size: 14.5px;
+  }
+  .work .meta{
+    font-size: 13px;
+    color: var(--ink-faint);
+  }
+  .work a.paper-link{
+    font-size: 13px;
+    color: var(--teal);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .work a.paper-link:hover{ text-decoration: underline; }
+
+  /* Talks timeline */
+  .talk{
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 18px;
+    padding: 16px 0;
+    border-top: 1px solid var(--line);
+  }
+  .talk:first-of-type{ border-top: none; }
+  .talk .when{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    color: var(--ink-faint);
+    padding-top: 2px;
+  }
+  .talk h3{ font-size: 15.5px; margin: 0 0 4px; font-weight: 600; font-family: 'Inter', sans-serif; }
+  .talk .place{ font-size: 13.5px; color: var(--ink-soft); margin-bottom: 4px; }
+  .talk a{ font-size: 13px; color: var(--teal); text-decoration: none; }
+  .talk a:hover{ text-decoration: underline; }
+
+  @media (max-width: 560px){
+    .talk{ grid-template-columns: 1fr; gap: 4px; }
+  }
+
+  /* Tech stack */
+  .stack-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 24px;
+  }
+  .stack-group .eyebrow{ margin-bottom: 10px; color: var(--ink-faint); }
+  .stack-group .eyebrow .dotpair .d-real{ background: var(--ink-faint); }
+  .stack-group .eyebrow .dotpair .d-synth{ border-color: var(--ink-faint); }
+  .pill-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .pill{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    background: var(--bg-raised);
+    border: 1px solid var(--line);
+    padding: 5px 10px;
+    border-radius: 6px;
+    color: var(--ink);
+  }
+
+  /* Contact / footer */
+  footer{
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 52px 24px 64px;
+    border-top: 1px solid var(--line);
+  }
+  footer h2{ font-size: 22px; margin: 0 0 10px; }
+  footer p{ color: var(--ink-soft); max-width: 52ch; margin: 0 0 24px; }
+  .contact-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .contact-row a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    background: var(--bg-raised);
+  }
+  .contact-row a.primary{
+    background: var(--teal);
+    border-color: var(--teal);
+    color: #fff;
+  }
+  .contact-row a:hover{ border-color: var(--ink); }
+  .contact-row a.primary:hover{ opacity: 0.92; border-color: var(--teal); }
+  .fine-print{
+    margin-top: 40px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-faint);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a class="brand" href="#top"></a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navList" aria-label="Toggle menu">☰</button>
+    <nav>
+      <ul id="navList">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#talks">Conference</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" style="border-top:none;">
+    <div class="hero-text">
+      <p class="role">Postdoctoral Researcher, Chulalongkorn University</p>
+      <h1>Hi, I'm Maha.</h1>
+      <p>I am a postdoc at <a href="https://www.math.sc.chula.ac.th/">mathcomp</a>, Chulalongkorn University working on synthetic data generation for health and genome data, 
+        before that i recieved my PhD in Computer Science at <a href="https://computing.kku.ac.th/aidalab">AIDA Lab</a>, college of computing, Khon Kaen University. 
+        While pursuing my PhD I had a great opportunity on research internship at <a href="https://rebeccaailab.rebeccacasalibro.workers.dev/">Rebecca AI Lab</a>, Feng-Chia University, Taiwan</p>
+    </div>
+    <div class="avatar-wrap">
+      <svg class="scatter" viewBox="0 0 200 200" aria-hidden="true">
+        <g opacity="0.9">
+          <circle cx="40" cy="55" r="4" fill="#0E7C7B"/>
+          <circle cx="58" cy="38" r="3" fill="#0E7C7B"/>
+          <circle cx="30" cy="80" r="3.4" fill="#0E7C7B"/>
+          <circle cx="55" cy="90" r="2.6" fill="#0E7C7B"/>
+          <circle cx="20" cy="60" r="2.4" fill="#0E7C7B"/>
+          <circle cx="48" cy="70" r="2" fill="#0E7C7B"/>
+          <circle cx="160" cy="140" r="4" fill="none" stroke="#E2603A" stroke-width="1.6"/>
+          <circle cx="175" cy="120" r="3" fill="none" stroke="#E2603A" stroke-width="1.6"/>
+          <circle cx="150" cy="160" r="3.2" fill="none" stroke="#E2603A" stroke-width="1.6"/>
+          <circle cx="180" cy="155" r="2.4" fill="none" stroke="#E2603A" stroke-width="1.6"/>
+          <circle cx="165" cy="175" r="2.6" fill="none" stroke="#E2603A" stroke-width="1.6"/>
+          <circle cx="145" cy="135" r="2" fill="none" stroke="#E2603A" stroke-width="1.6"/>
+        </g>
+      </svg>
+      <img src="image/avatar.png" alt="Portrait of I Nyoman Mahayasa Adiputra">
+    </div>
+  </section>
+
+  <section id="about">
+    <p class="eyebrow"><span class="dotpair"><span class="d-real"></span><span class="d-synth"></span></span> About</p>
+    <h2>Currently</h2>
+    <ul class="about-list">
+      <li><span class="dotpair"><span class="d-real"></span><span class="d-synth"></span></span> Postdoctoral Researcher at Chulalongkorn University</li>
+      <li><span class="dotpair"><span class="d-real"></span><span class="d-synth"></span></span> Research focus: synthetic data generation, tabular AI, and bioinformatics</li>
+      <li><span class="dotpair"><span class="d-real"></span><span class="d-synth"></span></span> Building a synthetic data platform for healthcare and biomedical data (soon)</li>
+      <li><span class="dotpair"><span class="d-real"></span><span class="d-synth"></span></span> Working as an AI/ML specialist and software developer</li>
+    </ul>
+    <div class="links-row">
+      <a href="https://www.linkedin.com/in/mahayasa-adiputra-b3796423a/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://orcid.org/0009-0005-5458-5125" target="_blank" rel="noopener">ORCID</a>
+      <a href="https://scholar.google.com/citations?user=uFS0JQQAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://github.com/mahayasa" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://twitter.com/mhysadptr" target="_blank" rel="noopener">Twitter / X</a>
+    </div>
+  </section>
+
+  <section id="research">
+    <p class="eyebrow"><span class="dotpair"><span class="d-real"></span><span class="d-synth"></span></span> Research works</p>
+    <div class="work">
+      <div class="work-head">
+        <h3>RNA-seq Gene Expression Classification</h3>
+        <span class="status">Ongoing</span>
+      </div>
+      <p>Ensemble synthetic data generation methods for gene expression data.</p>
+      <div class="meta">Chulalongkorn University, Thailand &amp; Heidelberg University, Germany</div>
+    </div>
+
+    <div class="work">
+      <h3>CTGAN-ENN</h3>
+      <p>Hybrid sampling method for churn prediction.</p>
+      <div class="meta">Khon Kaen University, Thailand · <a class="paper-link" href="https://link.springer.com/article/10.1186/s40537-024-00982-x" target="_blank" rel="noopener">View publication →</a></div>
+    </div>
+
+    <div class="work">
+      <h3>CostLearn GAN</h3>
+      <p>Optimized hybrid sampling method with cost-sensitive learning for churn prediction.</p>
+      <div class="meta">Khon Kaen University, Thailand &amp; Feng Chia University, Taiwan · <a class="paper-link" href="https://peerj.com/articles/cs-2949/" target="_blank" rel="noopener">View publication →</a></div>
+    </div>
+
+    <div class="work">
+      <h3>Credit Score Classifier</h3>
+      <p>Multi-class GAN oversampling method.</p>
+      <div class="meta">Feng Chia University, Taiwan · <a class="paper-link" href="https://www.mdpi.com/2079-9292/14/4/697" target="_blank" rel="noopener">View publication →</a></div>
+    </div>
+  </section>
+
+  <section id="talks">
+    <p class="eyebrow"><span class="dotpair"><span class="d-real"></span><span class="d-synth"></span></span> Talks</p>
+    <h2>International conferences</h2>
+
+    <div class="talk">
+      <div class="when">28 Jun–1 Jul 2023</div>
+      <div>
+        <h3>20th International Joint Conference on Computer Science and Software Engineering (JCSSE)</h3>
+        <div class="place">Phitsanulok, Thailand</div>
+        <a href="https://ieeexplore.ieee.org/abstract/document/10202105" target="_blank" rel="noopener">View publication →</a>
+      </div>
+    </div>
+
+    <div class="talk">
+      <div class="when">4–6 Nov 2026</div>
+      <div>
+        <h3>18th International Conference on Genetic and Evolutionary Computing (ICGEC)</h3>
+        <div class="place">Taichung, Taiwan</div>
+        <a href="https://icgec2026.com/committee/" target="_blank" rel="noopener">View conference page →</a>
+      </div>
+    </div>
+
+    <div class="talk">
+      <div class="when">7 Oct 2026</div>
+      <div>
+        <h3>3rd International Conference on Sustainable Green Tourism Applied Science (ICOSTAS)</h3>
+        <div class="place">Bali, Indonesia</div>
+        <a href="https://icostas.pnb.ac.id/2026/eas-comittee/" target="_blank" rel="noopener">View conference page →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="stack">
+    <p class="eyebrow"><span class="dotpair"><span class="d-real"></span><span class="d-synth"></span></span> Tech stack</p>
+    <h2>Tools I reach for</h2>
+    <div class="stack-grid">
+      <div class="stack-group">
+        <p class="eyebrow">Languages</p>
+        <div class="pill-row">
+          <span class="pill">Python</span><span class="pill">R</span><span class="pill">SQL</span>
+        </div>
+      </div>
+      <div class="stack-group">
+        <p class="eyebrow">ML / DL</p>
+        <div class="pill-row">
+          <span class="pill">GANs</span><span class="pill">Diffusion Models</span><span class="pill">Ensemble Models</span>
+        </div>
+      </div>
+      <div class="stack-group">
+        <p class="eyebrow">Data Science</p>
+        <div class="pill-row">
+          <span class="pill">Pandas</span><span class="pill">NumPy</span><span class="pill">Matplotlib</span><span class="pill">SHAP</span>
+        </div>
+      </div>
+      <div class="stack-group">
+        <p class="eyebrow">Tools</p>
+        <div class="pill-row">
+          <span class="pill">Docker</span><span class="pill">Git</span><span class="pill">Linux</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <h2>Get in touch</h2>
+    <p>Happy to talk synthetic data, tabular generative models, or AI for health and biology collaborations</p>
+    <div class="contact-row">
+      <a class="primary" href="mailto:inyoman.m@chula.ac.th">Email me</a>
+      <a href="https://github.com/mahayasa" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/mahayasa-adiputra-b3796423a/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=uFS0JQQAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://orcid.org/0009-0005-5458-5125" target="_blank" rel="noopener">ORCID</a>
+    </div>
+    <p class="fine-print">© <span id="year"></span> I Nyoman Mahayasa Adiputra.</p>
+  </footer>
+
+</main>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  var toggle = document.getElementById('navToggle');
+  var list = document.getElementById('navList');
+  toggle.addEventListener('click', function(){
+    var open = list.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  list.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      list.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+
+</body>
+</html>
