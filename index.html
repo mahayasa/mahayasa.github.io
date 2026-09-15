@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/broadsheet-77d20bf5-c8a5-4316-b1f4-6344480449e3/styles.css">
+<script src="_ds/broadsheet-77d20bf5-c8a5-4316-b1f4-6344480449e3/_ds_bundle.js"></script>
+<script src="./image-slot.js"></script>
+<style>
+body{margin:0;background:var(--color-bg);text-wrap:pretty}
+html{scroll-behavior:smooth}
+a{color:var(--color-accent);text-underline-offset:3px}
+a:hover{color:var(--color-accent-700)}
+</style>
+</helmet>
+<div style="display:flex;flex-wrap:wrap;gap:24px 64px;align-items:flex-start;max-width:1120px;margin:0 auto;padding:56px 32px 40px;font-family:var(--font-body);font-size:15.5px;line-height:1.62;color:var(--color-text)">
+
+<aside style="flex:0 1 250px;position:sticky;top:40px;display:flex;flex-direction:column;gap:20px;min-width:0">
+<image-slot id="maha-portrait" src="img/avatar.JPG" shape="rect" radius="0" fit="contain" style="width:190px;height:190px" placeholder="Drop portrait"></image-slot>
+
+<div style="display:flex;flex-direction:column;gap:10px">
+<h1 style="margin:0;font-size:29px;line-height:1.1;letter-spacing:-0.02em">
+<sc-if value="{{ plated }}" hint-placeholder-val="{{ true }}">
+<span class="cmyk-head" style="display:block"><span class="paper">I Nyoman Mahayasa Adiputra</span><span class="plate plate-c" aria-hidden="true">I Nyoman Mahayasa Adiputra</span><span class="plate plate-m" aria-hidden="true">I Nyoman Mahayasa Adiputra</span><span class="plate plate-y" aria-hidden="true">I Nyoman Mahayasa Adiputra</span></span>
+</sc-if>
+<sc-if value="{{ unplated }}" hint-placeholder-val="{{ false }}"><span style="display:block">I Nyoman Mahayasa Adiputra</span></sc-if>
+</h1>
+<p style="margin:0;font-size:14.5px;line-height:1.5;color:color-mix(in srgb,var(--color-text) 78%,transparent)">Postdoctoral Researcher<br>@ Chulalongkorn University<br>Ph.D. @ Khon Kaen University</p>
+<p style="margin:0;font-size:14px;font-feature-settings:'pnum' 1"><a href="mailto:inyoman.m@chula.ac.th" style="text-decoration:none">inyoman.m [AT] chula.ac.th</a></p>
+</div>
+
+<nav style="display:flex;flex-direction:column;gap:5px;font-size:14.5px">
+<a href="#bio" style="text-decoration:none;color:var(--color-text)" style-hover="color:var(--color-accent-700)">Bio</a>
+<a href="#research" style="text-decoration:none;color:var(--color-text)" style-hover="color:var(--color-accent-700)">Research</a>
+<a href="#talks" style="text-decoration:none;color:var(--color-text)" style-hover="color:var(--color-accent-700)">Conferences</a>
+<a href="#stack" style="text-decoration:none;color:var(--color-text)" style-hover="color:var(--color-accent-700)">Stack</a>
+<a href="#contact" style="text-decoration:none;color:var(--color-text)" style-hover="color:var(--color-accent-700)">Contact</a>
+</nav>
+
+<div style="display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;letter-spacing:0.02em">
+<a href="https://scholar.google.com/citations?user=uFS0JQQAAAAJ&hl=en" style="text-decoration:none">Google Scholar</a>
+<a href="https://github.com/mahayasa" style="text-decoration:none">GitHub</a>
+<a href="https://www.linkedin.com/in/mahayasa-adiputra-b3796423a/" style="text-decoration:none">LinkedIn</a>
+<a href="https://orcid.org/0009-0005-5458-5125" style="text-decoration:none">ORCID</a>
+<a href="https://twitter.com/mhysadptr" style="text-decoration:none">Twitter / X</a>
+</div>
+</aside>
+
+<main style="flex:1 1 460px;min-width:0;display:flex;flex-direction:column;gap:52px">
+
+<section id="bio" style="scroll-margin-top:32px">
+<h2 style="font-family:var(--font-heading);font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 70%,transparent);margin:0 0 16px">Bio</h2>
+<p style="margin:0 0 15px;max-width:66ch">I am a postdoc at <a href="https://www.math.sc.chula.ac.th/">mathcomscicu</a>, Chulalongkorn University working on synthetic data generation for health and genome data, before that I received my PhD in Computer Science at <a href="https://computing.kku.ac.th/aidalab">AIDA Lab</a>, College of Computing, Khon Kaen University. While pursuing my PhD I had a great opportunity on a research internship at <a href="https://rebeccaailab.rebeccacasalibro.workers.dev/">Rebecca AI Lab</a>, Feng-Chia University, Taiwan.</p>
+<p style="margin:0;max-width:66ch">My research interests are synthetic data generation, tabular AI, and AI for health and biology. I am building a synthetic data platform for healthcare and biomedical data, and work as an AI/ML specialist and software developer.</p>
+</section>
+
+<section id="research" style="scroll-margin-top:32px">
+<div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px;margin:0 0 22px">
+<h2 style="font-family:var(--font-heading);font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 70%,transparent);margin:0">Research works</h2>
+<div class="seg" role="group" aria-label="Filter research works">
+<label class="seg-opt"><input type="radio" name="workfilter" value="All" checked="{{ isAll }}" onChange="{{ setFilter }}"><span>All</span></label>
+<label class="seg-opt"><input type="radio" name="workfilter" value="Published" checked="{{ isPublished }}" onChange="{{ setFilter }}"><span>Published</span></label>
+<label class="seg-opt"><input type="radio" name="workfilter" value="Ongoing" checked="{{ isOngoing }}" onChange="{{ setFilter }}"><span>Ongoing</span></label>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:34px">
+<sc-for list="{{ works }}" as="w" hint-placeholder-count="4">
+<article style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:22px;align-items:start">
+<image-slot id="{{ w.slot }}" src="{{ w.icon }}" shape="rect" radius="0" fit="contain" style="width:150px;height:112px" placeholder="{{ w.figure }}"></image-slot>
+<div style="min-width:0">
+<h3 style="margin:0 0 4px;font-size:19px;line-height:1.25;letter-spacing:-0.01em">{{ w.title }}</h3>
+<p style="margin:0 0 6px;font-size:15px;line-height:1.55;color:color-mix(in srgb,var(--color-text) 80%,transparent)">{{ w.blurb }}</p>
+<p style="margin:0 0 8px;font-size:14px;font-style:italic;color:color-mix(in srgb,var(--color-text) 70%,transparent)">{{ w.where }}</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13.5px">
+<sc-if value="{{ w.ongoing }}" hint-placeholder-val="{{ false }}"><span class="tag tag-accent-2">Ongoing</span></sc-if>
+<sc-for list="{{ w.links }}" as="l" hint-placeholder-count="2">
+<a href="{{ l.href }}" style="text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--color-accent) 45%,transparent)">{{ l.label }}</a>
+</sc-for>
+</div>
+</div>
+</article>
+</sc-for>
+</div>
+</section>
+
+<section id="talks" style="scroll-margin-top:32px">
+<h2 style="font-family:var(--font-heading);font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 70%,transparent);margin:0 0 20px">International conferences</h2>
+<div style="display:flex;flex-direction:column;gap:22px">
+<sc-for list="{{ talks }}" as="t" hint-placeholder-count="3">
+<article style="display:grid;grid-template-columns:135px minmax(0,1fr);gap:22px;align-items:baseline">
+<p style="margin:0;font-size:13.5px;letter-spacing:0.04em;text-transform:uppercase;font-feature-settings:'pnum' 1;color:color-mix(in srgb,var(--color-text) 70%,transparent)">{{ t.date }}</p>
+<div style="min-width:0">
+<h3 style="margin:0 0 4px;font-size:17.5px;line-height:1.3">{{ t.title }}</h3>
+<p style="margin:0 0 6px;font-size:14px;font-style:italic;color:color-mix(in srgb,var(--color-text) 70%,transparent)">{{ t.place }}</p>
+<a href="{{ t.href }}" style="font-size:13.5px;text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--color-accent) 45%,transparent)">{{ t.linkLabel }}</a>
+</div>
+</article>
+</sc-for>
+</div>
+</section>
+
+<sc-if value="{{ showStack }}" hint-placeholder-val="{{ true }}">
+<section id="stack" style="scroll-margin-top:32px">
+<h2 style="font-family:var(--font-heading);font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 70%,transparent);margin:0 0 20px">Tools I reach for</h2>
+<div style="display:flex;flex-direction:column;gap:14px">
+<sc-for list="{{ stack }}" as="g" hint-placeholder-count="4">
+<div style="display:grid;grid-template-columns:135px minmax(0,1fr);gap:22px;align-items:baseline">
+<p style="margin:0;font-size:13.5px;letter-spacing:0.04em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 70%,transparent)">{{ g.label }}</p>
+<div style="display:flex;flex-wrap:wrap;gap:7px">
+<sc-for list="{{ g.items }}" as="i" hint-placeholder-count="3">
+<span class="tag tag-neutral">{{ i }}</span>
+</sc-for>
+</div>
+</div>
+</sc-for>
+</div>
+</section>
+</sc-if>
+
+<section id="contact" style="scroll-margin-top:32px">
+<h2 style="font-family:var(--font-heading);font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 70%,transparent);margin:0 0 16px">Get in touch</h2>
+<p style="margin:0 0 18px;max-width:60ch;font-size:17px">Happy to talk synthetic data, tabular generative models, or AI for health and biology collaborations</p>
+<div style="display:flex;flex-wrap:wrap;gap:10px">
+<a class="btn btn-primary" href="mailto:inyoman.m@chula.ac.th">Email me</a>
+<a class="btn btn-secondary" href="https://github.com/mahayasa">GitHub</a>
+<a class="btn btn-secondary" href="https://scholar.google.com/citations?user=uFS0JQQAAAAJ&hl=en">Google Scholar</a>
+</div>
+</section>
+
+<footer style="font-size:13px;line-height:1.6;color:color-mix(in srgb,var(--color-text) 70%,transparent)">
+<p style="margin:0">Layout after the two-column academic template at xiyuanzh.github.io. Typography and print treatments from the Broadsheet system.</p>
+<p style="margin:6px 0 0">© I Nyoman Mahayasa Adiputra.</p>
+</footer>
+</main>
+</div>
+<template id="__bundler_thumbnail">
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="120" fill="#f3f2f2"/><text x="60" y="76" text-anchor="middle" font-family="Source Serif 4, Georgia, serif" font-size="46" font-weight="600" fill="#201e1d">M</text><rect x="36" y="86" width="48" height="3" fill="#0088b0"/></svg>
+</template>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;platedName&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Treatment&quot;},&quot;showStack&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sections&quot;},&quot;worksFilter&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;All&quot;,&quot;Published&quot;,&quot;Ongoing&quot;],&quot;default&quot;:&quot;All&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Sections&quot;}}">
+const ICON = (n) => "https://unpkg.com/@phosphor-icons/core@2.1.1/assets/duotone/" + n + "-duotone.svg";
+
+const WORKS = [
+  { slot: "fig-rnaseq", figure: "RNA-seq figure", icon: ICON("dna"), ongoing: true,
+    title: "RNA-seq Gene Expression Classification",
+    blurb: "Ensemble synthetic data generation methods for RNA-seq gene expression data.",
+    where: "Chulalongkorn University, Thailand; King Mongkut\u2019s University of Technology North Bangkok, Thailand & Heidelberg University, Germany",
+    links: [{ label: "View Github project", href: "https://github.com/omicshub-cu/MLDS" }, { label: "Publication coming soon", href: "#research" }] },
+  { slot: "fig-ctganenn", figure: "CTGAN-ENN figure", icon: ICON("users-three"), ongoing: false,
+    title: "CTGAN-ENN",
+    blurb: "Hybrid sampling method for solving imbalanced and overlapping data on customer churn prediction.",
+    where: "Khon Kaen University, Thailand",
+    links: [{ label: "View Github project", href: "https://github.com/mahayasa/gan-hybrid-sampling-customer-churn" }, { label: "View publication \u2192", href: "https://link.springer.com/article/10.1186/s40537-024-00982-x" }] },
+  { slot: "fig-costlearn", figure: "CostLearn GAN figure", icon: ICON("scales"), ongoing: false,
+    title: "CostLearn GAN",
+    blurb: "Optimized hybrid sampling method (CTGAN-ENN) with cost-sensitive learning for customer churn prediction.",
+    where: "Khon Kaen University, Thailand & Feng Chia University, Taiwan",
+    links: [{ label: "View Github project", href: "https://github.com/mahayasa/ctgan-enn-cs" }, { label: "View publication \u2192", href: "https://peerj.com/articles/cs-2949/" }] },
+  { slot: "fig-credit", figure: "Credit score figure", icon: ICON("credit-card"), ongoing: false,
+    title: "Credit Score Classifier",
+    blurb: "GAN oversampling method for multi-class imbalanced data",
+    where: "Feng Chia University, Taiwan",
+    links: [{ label: "View Github project", href: "https://github.com/RebeccaLab/gan-multi-class-credit-score" }, { label: "View publication \u2192", href: "https://www.mdpi.com/2079-9292/14/4/697" }] }
+];
+
+const TALKS = [
+  { date: "28 Jun\u20131 Jul 2023", title: "20th International Joint Conference on Computer Science and Software Engineering (JCSSE)", place: "Phitsanulok, Thailand", href: "https://ieeexplore.ieee.org/abstract/document/10202105", linkLabel: "View publication \u2192" },
+  { date: "4\u20136 Nov 2026", title: "18th International Conference on Genetic and Evolutionary Computing (ICGEC)", place: "Taichung, Taiwan", href: "https://icgec2026.com/committee/", linkLabel: "View conference page \u2192" },
+  { date: "7 Oct 2026", title: "3rd International Conference on Sustainable Green Tourism Applied Science (ICOSTAS)", place: "Bali, Indonesia", href: "https://icostas.pnb.ac.id/2026/eas-comittee/", linkLabel: "View conference page \u2192" }
+];
+
+const STACK = [
+  { label: "Languages", items: ["Python", "R", "SQL"] },
+  { label: "ML / DL", items: ["GANs", "Diffusion Models", "Ensemble Models"] },
+  { label: "Data Science", items: ["Pandas", "NumPy", "Matplotlib", "SHAP"] },
+  { label: "Tools", items: ["Docker", "Git", "Linux"] }
+];
+
+class Component extends DCLogic {
+  state = { filter: null };
+  renderVals() {
+    const filter = this.state.filter ?? (this.props.worksFilter ?? "All");
+    const works = WORKS.filter((w) => filter === "All" || (filter === "Ongoing" ? w.ongoing : !w.ongoing));
+    const plated = this.props.platedName ?? true;
+    return {
+      works, talks: TALKS, stack: STACK,
+      plated, unplated: !plated,
+      showStack: this.props.showStack ?? true,
+      isAll: filter === "All", isPublished: filter === "Published", isOngoing: filter === "Ongoing",
+      setFilter: (e) => this.setState({ filter: e.target.value })
+    };
+  }
+}
+</script>
+</body>
+</html>
