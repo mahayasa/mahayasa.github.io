@@ -618,6 +618,17 @@
   }
   .link-arrow svg{ width: 16px; height: 16px; transition: transform .2s ease; }
   .link-arrow:hover svg{ transform: translate(3px, -3px); }
+  .work-links{ display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; }
+  .link-arrow.code{
+    color: var(--ink);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 5px 12px;
+    background: var(--white);
+    transition: border-color .2s ease, color .2s ease, background .2s ease;
+  }
+  .link-arrow.code:hover{ border-color: var(--blue-700); color: var(--white); background: var(--blue-700); }
+  .link-arrow.code:hover svg{ transform: none; }
   .work.featured{
     background: linear-gradient(150deg, var(--white) 40%, var(--blue-50));
     border-color: var(--blue-100);
@@ -995,6 +1006,9 @@
           </div>
           <h3>RNA-seq Gene Expression Classification</h3>
           <p>Ensemble synthetic data generation methods for gene expression data.</p>
+          <div class="work-links">
+            <a class="link-arrow code" href="https://github.com/mahayasa/MLDS" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg>Code</a>
+          </div>
           <div class="meta"><svg><use href="#i-uni"/></svg>Chulalongkorn University, Thailand &amp; Heidelberg University, Germany</div>
         </article>
 
@@ -1005,7 +1019,10 @@
           </div>
           <h3>CTGAN-ENN</h3>
           <p>Hybrid sampling method for churn prediction.</p>
-          <a class="link-arrow" href="https://link.springer.com/article/10.1186/s40537-024-00982-x" target="_blank" rel="noopener">View publication <svg><use href="#i-ext"/></svg></a>
+          <div class="work-links">
+            <a class="link-arrow" href="https://link.springer.com/article/10.1186/s40537-024-00982-x" target="_blank" rel="noopener">View publication <svg><use href="#i-ext"/></svg></a>
+          <a class="link-arrow code" href="https://github.com/mahayasa/gan-hybrid-sampling-customer-churn" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg>Code</a>
+          </div>
           <div class="meta"><svg><use href="#i-uni"/></svg>Khon Kaen University, Thailand</div>
         </article>
 
@@ -1016,7 +1033,10 @@
           </div>
           <h3>CostLearn GAN</h3>
           <p>Optimized hybrid sampling method with cost-sensitive learning for churn prediction.</p>
-          <a class="link-arrow" href="https://peerj.com/articles/cs-2949/" target="_blank" rel="noopener">View publication <svg><use href="#i-ext"/></svg></a>
+          <div class="work-links">
+            <a class="link-arrow" href="https://peerj.com/articles/cs-2949/" target="_blank" rel="noopener">View publication <svg><use href="#i-ext"/></svg></a>
+          <a class="link-arrow code" href="https://github.com/mahayasa/ctgan-enn-cs" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg>Code</a>
+          </div>
           <div class="meta"><svg><use href="#i-uni"/></svg>Khon Kaen University, Thailand &amp; Feng Chia University, Taiwan</div>
         </article>
 
@@ -1027,7 +1047,10 @@
           </div>
           <h3>Credit Score Classifier</h3>
           <p>Multi-class GAN oversampling method.</p>
-          <a class="link-arrow" href="https://www.mdpi.com/2079-9292/14/4/697" target="_blank" rel="noopener">View publication <svg><use href="#i-ext"/></svg></a>
+          <div class="work-links">
+            <a class="link-arrow" href="https://www.mdpi.com/2079-9292/14/4/697" target="_blank" rel="noopener">View publication <svg><use href="#i-ext"/></svg></a>
+          <a class="link-arrow code" href="https://github.com/RebeccaLab/gan-multi-class-credit-score" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg>Code</a>
+          </div>
           <div class="meta"><svg><use href="#i-uni"/></svg>Feng Chia University, Taiwan</div>
         </article>
       </div>
