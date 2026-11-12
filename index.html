@@ -35,6 +35,7 @@
     --line: #3A3A3D;
     --link: #2698BA;
     --link-hover: #4FB9D9;
+    --flake: #FFFFFF;
     --callout-bg: #FFFFFF;
     --callout-text: #1C1C1D;
     --badge: #2E2E31;
@@ -48,6 +49,7 @@
     --line: #E2E4E7;
     --link: #0B7C9C;
     --link-hover: #075A72;
+    --flake: #2698BA;
     --callout-bg: #EEF4F6;
     --callout-text: #1A1A1B;
     --badge: #EDEFF1;
@@ -177,13 +179,15 @@
   @keyframes pop{ 0%,86%{ opacity: 1; } 87%,100%{ opacity: 0; } }
 
   .name{ font-size: clamp(22px, 6.4vw, 32px); margin-bottom: 12px; white-space: nowrap; }
-  .tags{ display: flex; flex-wrap: wrap; gap: 6px 0; margin-bottom: 20px; }
-  .tags span{
-    font-weight: 500; font-size: 16px;
-    padding: 0 8px; border-left: 2px solid var(--text);
-    line-height: 1.2;
+  .tags{ display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin-bottom: 20px; }
+  .tags span{ font-weight: 500; font-size: 16px; line-height: 1.2; }
+  .tags span + span::before{
+    content: ""; display: inline-block; vertical-align: -2px;
+    width: 15px; height: 15px; margin-right: 10px;
+    background-color: var(--flake);
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round'%3E%3Cpath d='M12 2v20M3.3 7l17.4 10M3.3 17L20.7 7'/%3E%3Cpath d='M9.5 3.8L12 6l2.5-2.2M9.5 20.2L12 18l2.5 2.2M3.6 10.6l3.2-.6-1-3.2M20.4 13.4l-3.2.6 1 3.2M5.8 17.2l1-3.2-3.2-.6M18.2 6.8l-1 3.2 3.2.6'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round'%3E%3Cpath d='M12 2v20M3.3 7l17.4 10M3.3 17L20.7 7'/%3E%3Cpath d='M9.5 3.8L12 6l2.5-2.2M9.5 20.2L12 18l2.5 2.2M3.6 10.6l3.2-.6-1-3.2M20.4 13.4l-3.2.6 1 3.2M5.8 17.2l1-3.2-3.2-.6M18.2 6.8l-1 3.2 3.2.6'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
   }
-  .tags span:first-child{ padding-left: 0; border-left: 0; }
   .profile p{ margin: 0 0 16px; }
 
   .callout{
